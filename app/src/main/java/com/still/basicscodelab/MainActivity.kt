@@ -12,6 +12,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -39,23 +41,31 @@ private fun MyApp(modifier: Modifier = Modifier, names: List<String> = listOf("W
 
 @Composable
 fun Greeting(name: String) {
+    val extended = remember { mutableStateOf(false) }
+    val extraPadding = if (extended.value) 48.dp else 0.dp
     Surface(
         color = MaterialTheme.colorScheme.primary,
         modifier = Modifier.padding(vertical = 4.dp, horizontal = 8.dp)
     ) {
         Row(modifier = Modifier.padding(24.dp)) {
             Column(
-                modifier = Modifier.weight(1F)
+                modifier = Modifier
+                    .weight(1F)
+                    .padding(bottom = extraPadding)
             ) {
                 Text(text = "Hello,")
                 Text(text = "$name!")
             }
-            ElevatedButton(onClick = { /*TODO*/ }) {
-                Text("Show more")
+            ElevatedButton(onClick = { extended.value = !extended.value }) {
+                Text(if (extended.value) "Show less" else "Show more")
             }
         }
-
     }
+}
+
+@Composable
+fun OnBoardingScreen(modifier: Modifier = Modifier) {
+    var shouldShowOnBoarding by remember { mutableStateOf(true) }
 }
 
 @Preview(showBackground = true, widthDp = 320)
