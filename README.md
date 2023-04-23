@@ -1,4 +1,6 @@
 # Basic-Codelab
+### ■screen shot
+![Untitled](https://user-images.githubusercontent.com/129733584/233834048-0bc73855-f01d-427a-9a93-23f315e48a10.gif)
 
 ### ■reference
 
@@ -9,7 +11,7 @@
 - Icons dependencies <br>
   `implementation "androidx.compose.material:material-icons-extended:$compose_version"`
 
-### ■training result
+### ■partical kotlin training 
 
 ```
 // Use function types and lambda expressions in Kotlin
