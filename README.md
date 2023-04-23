@@ -5,6 +5,9 @@
 - [Jetpack Compose basics](https://developer.android.com/codelabs/jetpack-compose-basics#0)
 - [List of Compose Modifiers](https://developer.android.com/jetpack/compose/modifiers-list)
     - [Use function types and lambda expressions in Kotlin](https://developer.android.com/codelabs/basic-android-kotlin-compose-function-types-and-lambda#2)
+- [Animation Doc](https://developer.android.com/jetpack/compose/animation)
+- Icons dependencies <br>
+  `implementation "androidx.compose.material:material-icons-extended:$compose_version"`
 
 ### ■training result
 
